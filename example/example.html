@@ -68,7 +68,7 @@ Just type [b]:[/b]) and it should be converted into :) as you type.</textarea>
 			</div>
 		</form>
 
-
+<div id="out"></div>
 		<script>
 			var textarea = document.getElementById('example');
 			sceditor.create(textarea, {
@@ -77,6 +77,8 @@ Just type [b]:[/b]) and it should be converted into :) as you type.</textarea>
 				style: '../minified/themes/content/default.min.css'
 			});
 
+			var abc = sceditor.instance(textarea);
+			document.getElementById('out').innerHTML=abc.getBody().outerHTML;
 
 			var themeInput = document.getElementById('theme');
 			themeInput.onchange = function() {
