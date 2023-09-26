@@ -52,6 +52,17 @@ var textarea = document.getElementById("id-of-textarea");
 sceditor.instance(textarea).val();
 ```
 
+前端展示：
+```html
+<div id="out"></div>
+```
+
+```js
+var textarea = '[ul][li]A simple list[/li][li]list item 2[/li][/ul]';
+var abc = sceditor.instance(textarea);
+document.getElementById('out').innerHTML=abc.getBody().outerHTML;
+```
+
 
 ## Options
 
